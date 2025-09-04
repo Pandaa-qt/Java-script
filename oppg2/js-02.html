@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oppgaver i JavaScript</title>
+  <title>Oppg. 2</title>
   <style>
     body { font-family: Arial, sans-serif; padding: 20px; }
     section { margin-bottom: 50px; border-bottom: 2px solid #000000; padding-bottom: 20px; }
@@ -119,6 +119,91 @@
         }
       }
       document.getElementById('result7').innerText = "Sum = " + sum7;
+    </script>
+  </section>
+
+<!-- Oppg. 8 -->
+  <section>
+    <h2>Oppgave 8 – Sum av tall</h2>
+    <script>
+      let brukerTall = prompt("Tast inn et tall som er mindre enn 10 000:");
+      let summen1 = 0;
+      for (let i = 0; i <= brukerTall; i++)
+        summen1 = summen1 + i;
+      document.write(`Summen av alle tall mellom 0 og ${brukerTall} er: ` + summen1);
+    </script>
+  </section>
+
+  <!-- Oppg. 9 -->
+  <section>
+    <h2>Oppgave 9 – Quiz</h2>
+    <script>
+      let poeng=0
+      let svar1 = prompt("Hva heter hovedkarakteren i filmen Dune?");
+      if( svar1==="Paul Atreides" || svar1==="Paul" || svar1==="Atreides") {
+          document.write("Helt riktig, du får 2 poeng <br>");
+          poeng = poeng + 2
+      }
+      else
+          document.write("Feil svar <br>")
+
+      let svar2= prompt("Hva heter kjæresten til Paul?");
+      if( svar2==="Chani") {
+          document.write("Helt riktig, du får 2 poeng <br>");
+          poeng = poeng + 2
+      }
+      else
+          document.write("Feil svar")
+      document.write("<br>Du fikk totalt: " + poeng);
+    </script>
+  </section>
+
+<!-- Oppg. 10 -->
+  <section>
+    <h2>Oppgave 10 – Tabell</h2>
+    <script>
+      document.write( `
+      <table>
+        <thead>
+          <tr>
+            <th>Tall</th>
+            <th>Kvadrat</th>
+            <th>Kubikk</th>
+          </tr>
+        </thead>
+        <tbody>
+      ` );
+      for (let i = 1; i <= 100; i++) {
+        document.write( `
+          <tr>
+            <td>${i}</td>
+            <td>${i ** 2}</td>
+            <td>${i ** 3}</td>
+          </tr>
+        ` );
+      }
+      document.write( `
+        </tbody>
+      </table>` );
+    </script>
+  </section>
+
+<!-- Oppg. 11 -->
+  <section>
+    <h2>Oppgave 11 – FizzBuzz</h2>
+    <script>
+      for (let i = 1; i <= 100; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+          document.write('FizzBuzz');
+        } else if (i % 3 === 0) {
+          document.write('Fizz');
+        } else if (i % 5 === 0) {
+          document.write('Buzz');
+        } else {
+          document.write(i);
+        }
+        document.write('<br>');
+      }
     </script>
   </section>
 

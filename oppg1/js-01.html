@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <title>Oppg. 1</title>
+</head>
+<body>
+  <h1> – JavaScript</h1>
+
+  <!-- Oppg. 1 -->
+  <h2>1. Alert med teksten "Utvikling"</h2>
+  <button onclick="alert('Utvikling')">Vis alert</button>
+
+  <!-- Oppg. 2 -->
+  <h2>2. Vis navnet ditt med JavaScript</h2>
+  <button onclick="alert('Hallo, Siri')">Vis navnet mitt</button>
+  <!-- Oppg. 3 -->
+  <h2>3. Finn høyden og bredden på fanen</h2>
+  <button onclick="alert('Vidden er: ' + window.innerWidth + ' og høyden er: ' + window.innerHeight)">
+    Se størrelse
+  </button>
+
+  <!-- Oppg. 4 -->
+  <h2>4. Variabel med navnet ditt</h2>
+  <script>
+    let navn = "Siri";
+    document.write("<p>Wow nice name, " + navn + "</p>");
+  </script>
+  
+  <!-- Oppg. 5 -->
+  <h2>5. Innskrivingsfelt</h2>
+  <input type="text" id="brukerInput" placeholder="Skriv noe her">
+  <button onclick="visSvar()">Send</button>
+  <p id="resultat"></p>
+  <script>
+    function visSvar() {
+      let svar = document.getElementById("brukerInput").value;
+      document.getElementById("resultat").innerText = "Du skrev: " + svar;
+    }
+  </script>
+
+  <!-- Oppg. 6 -->
+  <h2>6. Hva betyr string?</h2>
+  <p><strong>String</strong> betyr tekst i programmering, f.eks. "Hei" eller "123".</p>
+
+  <!-- Oppg. 7 -->
+  <h2>7. Overskrive body</h2>
+  <button onclick="document.body.innerHTML='JavaScript funket siden du ser dette.'">
+    Overskriv innhold
+  </button>
+
+  <!-- Oppg. 8 -->
+  <h2>8. Endre tekst med getElementById</h2>
+  <p id="minId">Dette er gammel tekst</p>
+  <button onclick="document.getElementById('minId').innerText='Vi fikk endret teksten med JavaScript'">
+    Endre tekst
+  </button>
+
+  <!-- Oppg. 9 -->
+  <h2>9. Bytte bilde med getElementById</h2>
+  <img id="bilde" src="bilde1.jpg" width="200">
+  <button onclick="document.getElementById('bilde').src='bilde2.jpg'">Bytt bilde</button>
+
+  <!-- Oppg. 10 -->
+  <h2>10. Challenge – Mynt eller kron (automatisk ved lasting)</h2>
+  <img id="imgKron" width="200">
+  <script>
+    let imgKron=document.getElementById("imgKron");
+    var tilfeldigTall=Math.random();
+    if(tilfeldigTall<0.5){
+      imgKron.src="kron.jpg";
+    } else {
+      imgKron.src="mynt.jpg";
+    }
+  </script>
+
+  <!-- Oppg. 11 -->
+  <h2>11. Mynt eller kron med knapp</h2>
+  <img
+    alt="Mynt eller kron?"
+    id="kastBilde"
+src=" SKRIV IN URL "
+    width="200">
+  <br>
+  <button onclick="kastMynt()">Kast!</button>
+
+  <script>
+    function kastMynt () {
+      const bildeelementet = document.getElementById("kastBilde")
+      const tall = Math.random()
+      if (tall < 0.5)
+        bildeelementet.src = "kron.jpg"
+      else
+        bildeelementet.src = "mynt.jpg"
+    }
+  </script>
+
+</body>
+</html>
