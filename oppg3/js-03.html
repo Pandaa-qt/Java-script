@@ -1,19 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>oppg. 3</title>
 </head>
 <body>
-    <!--Oppg.1-->
+<!--Oppg.1-->
     <section>
-        <h2>Oppg. 1</h2>
+        <h1>Oppg. 1</h1>
         <p>Lag en webside med en knapp. Teksten i knappen skal være "Vis mitt navn". Når man trykker på knappen, skal det dukke opp en melding som viser ditt navn.</p>
-        <script>
-           <button onclick="alert('Edita!')">MITT NAMN</button> 
-        </script>
+        <button onclick="alert('Siri!')">MITT NAVN</button>
     </section>
+
+<!--Oppg. 2-->
+    <section>
+        <h1>Oppg. 2</h1>
+        <p>Lag en webside med en overskrift. Når man tar musen over overskriften skal den endre farge. Når man trykker på overskriften skal det vises en melding.</p>
+        <h2
+            onmouseenter="this.style.color = 'red'"
+            onmouseleave="this.style.color = 'blue'"
+            onclick="alert('BØØ')"
+        >Mus over her</h2>
+    </section>
+
+<!--Oppg. 3-->
+    <section>
+        <h1>Oppg. 3</h1>
+        <p>Lag en webside med 5 knapper. Alle knappene skal ha det samme innholdet, "Klikk meg". Velg ut en tilfeldig knapp – denne skal vise "Riktig!"</p>
+        <button onclick="alert('Feil!')">KLIKK MEG</button>
+        <button onclick="alert('Rektig!')">KLIKK MEG</button>
+        <button onclick="alert('Feil!')">KLIKK MEG</button>
+        <button onclick="alert('Feil!')">KLIKK MEG</button>
+        <button onclick="alert('Feil!')">KLIKK MEG</button>
+    </section>
+
+<!--Oppg. 4-->
+
+    <section>
+        <h1>Oppgave 4</h1>
+        <p>Kor lang er ein ny født Panda?</p>
+            <ol>
+                <li><button onclick="alert('Feil')">20 cm</button></li>
+                <li><button onclick="alert('Feil!')">35cm</button></li>
+                <li><button onclick="alert('Riktig')">15 cm</button></li>
+                <li><button onclick="alert('Feil!')">8 cm</button></li>
+            </ol>
+  </section>
+
+<!--Oppg. 5-->
+
+  <section>
+    <h1>Oppgave 5</h1>
+    <p>Quiz-variant uten knapper:</p>
+    <p>Er pandaer feite?</p>
+        <ul>
+            <li onclick="alert('Feil')">NEI</li>
+            <li onclick="alert('Feil!')">JA</li>
+            <li onclick="alert('Riktig')">NEI, dei har muskler</li>
+            <li onclick="alert('Feil!')">JA, dei spiser mykje</li>
+        </ul>
+  </section>
+
+<!--Oppg. 6-->
+    <section>
+        <h1>Oppgave 6</h1>
+        <p>Hei, prøver å lage en lang <span onclick="alert('riktig')">setning</span> der et av ordene er riktig.</p>
+        <p>Hei, korleis går det med deg da?</p>
+    </section>
+
     
 </body>
 </html>
