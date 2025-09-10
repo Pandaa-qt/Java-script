@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPPGAVE 4</title>
+</head>
+<body>
+    <!--Oppgave 1-->
+    <h1>Oppgave 1</h1>
+    <script>
+        function visNavn()  {
+            alert("Siri");
+        }
+    </script>
+
+    <!--Oppgave 2-->
+    <h1>Oppgave 2</h1>
+    <script>
+        function visNavn () {
+            alert('Siri')
+        }
+        visNavn ()
+    </script>
+    <button onclick="visNavn ()" > Klikk here </button>
+
+    <!--Oppgave 3-->
+    <h1>Oppgave 3</h1>
+    <script>
+        function skrivNavn()    {
+            document.write('Siri ')
+        }
+        for (let i=0; i<1008; i++) {
+            skrivNavn()
+        }
+    </script>
+
+    <!--Oppgave 4-->
+    <h1>Oppgave 4</h1>
+    <script>
+        function square(i)  {
+            return i * i
+        }
+        function third(i)   {
+            return i * i * i
+        }
+        </script>
+        <script>
+        function getRow(i) {
+            let s = '<tr>'
+                s += '<td>' + i + '</td>'
+                s + '<td>' + square(i) + '</td>'
+                s + '<td>' + third(i) + '</td>'
+                s+= '</tr>'
+                return s
+        }
+    </script>
+    <script>
+        function writeTable()   {
+            document.write('table')
+            for (let i = 0; i < 100; i++)   {
+                document.write(getRow(i))
+            }
+            document.write('</table>')
+        }
+    </script>
+    <button onclick='writeTable()'>Start!</button>
+</body>
+</html>
