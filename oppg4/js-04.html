@@ -1,69 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OPPGAVE 4</title>
 </head>
 <body>
-    <!--Oppgave 1-->
+    <!-- Oppgave 1 -->
     <h1>Oppgave 1</h1>
     <script>
+        // Lager en funksjon som viser en alert med navnet "Siri"
         function visNavn()  {
+            // Viser en popup-melding med teksten "Siri"
             alert("Siri");
         }
     </script>
 
-    <!--Oppgave 2-->
+    <!-- Oppgave 2 -->
     <h1>Oppgave 2</h1>
     <script>
+        // Definerer en funksjon som viser en alert med navnet "Siri"
         function visNavn () {
+            // Viser en popup-melding med teksten "Siri"
             alert('Siri')
         }
+        // Kaller funksjonen slik at alerten vises med en gang siden lastes
         visNavn ()
     </script>
-    <button onclick="visNavn ()" > Klikk here </button>
+    <!-- Knapp som kjører funksjonen visNavn når man trykker -->
+    <button onclick="visNavn ()" > Klikk her </button>
 
-    <!--Oppgave 3-->
+    <!-- Oppgave 3 -->
     <h1>Oppgave 3</h1>
     <script>
+        // Lager en funksjon som skriver ut "Siri " på nettsiden
         function skrivNavn()    {
+            // Skriver ut "Siri " på nettsiden
             document.write('Siri ')
         }
+        // Gjentar 1008 ganger: kaller funksjonen skrivNavn
         for (let i=0; i<1008; i++) {
             skrivNavn()
         }
     </script>
 
-    <!--Oppgave 4-->
+    <!-- Oppgave 4 -->
     <h1>Oppgave 4</h1>
     <script>
+        // Funksjon som returnerer kvadratet av tallet (i * i)
         function square(i)  {
-            return i * i
+            // Returnerer i multiplisert med seg selv
+            return i * i;
         }
+        // Funksjon som returnerer kuben av tallet (i * i * i)
         function third(i)   {
-            return i * i * i
+            // Returnerer i multiplisert med seg selv to ganger til (i^3)
+            return i * i * i;
         }
-        </script>
-        <script>
+
+        // Funksjon som lager en rad i tabellen for tallet i
         function getRow(i) {
-            let s = '<tr>'
-                s += '<td>' + i + '</td>'
-                s + '<td>' + square(i) + '</td>'
-                s + '<td>' + third(i) + '</td>'
-                s+= '</tr>'
-                return s
+            // Starter en streng med en ny tabellrad
+            let s = '<tr>';
+            // Legger til en celle med tallet i
+            s += '<td>' + i + '</td>';
+            // Legger til en celle med kvadratet av i
+            s += '<td>' + square(i) + '</td>';
+            // Legger til en celle med kuben av i
+            s += '<td>' + third(i) + '</td>';
+            // Avslutter tabellraden
+            s += '</tr>';
+            // Returnerer hele raden som en HTML-streng
+            return s;
         }
-    </script>
-    <script>
+
+        // Funksjon som skriver ut tabellen på nettsiden
         function writeTable()   {
-            document.write('table')
-            for (let i = 0; i < 100; i++)   {
-                document.write(getRow(i))
+            // Skriver ut starten på tabellen
+            document.write('<table border="1">');
+            // Skriver ut overskriftsraden
+            document.write('<tr><th>Tall</th><th>Kvadrat</th><th>Kube</th></tr>');
+            // Går gjennom tallene 1 til 10 og skriver ut en rad for hvert tall
+            for (let i = 1; i <= 10; i++)   {
+                document.write(getRow(i));
             }
-            document.write('</table>')
+            // Skriver ut slutten på tabellen
+            document.write('</table>');
         }
     </script>
+    <!-- Knapp som kjører writeTable-funksjonen når man trykker -->
     <button onclick='writeTable()'>Start!</button>
+    
 </body>
 </html>

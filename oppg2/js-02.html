@@ -17,15 +17,22 @@
   <section>
     <h2>Oppgave 1</h2>
     <script>
+      // Spør brukeren om hvilken by de er født i, og lagrer svaret i variabelen 'by'
       const by = prompt("Hvilken by er du født i?");
+      // Definerer en funksjon som sjekker om brukeren har skrevet inn riktig by
       function sjekkBy(brukerBy) {
+        // Lager en liste med alle gyldige svar
         const riktigBy = ["Kristiansand", "kristiansand", "Krs", "krs"];
+        // Sjekker om brukerens svar finnes i listen over riktige svar
         if (riktigBy.includes(brukerBy)) {
+          // Hvis svaret er riktig, vis en alert med bekreftelse
           alert(brukerBy + " er riktig by!");
         } else {
+          // Hvis svaret er feil, vis en alert med feilmelding
           alert(brukerBy + " var feil by.");
         }
       };
+      // Kaller funksjonen med brukerens svar
       sjekkBy(by);
     </script>
   </section>
@@ -33,17 +40,27 @@
   <!-- Oppg. 2 -->
   <section>
     <h2>Oppgave 2</h2>
+    <!-- Tekstfelt hvor brukeren kan skrive inn navnet sitt -->
     <input type="text" id="userInput" placeholder="Skriv inn navnet ditt">
+    <!-- Knapp som kjører funksjonen tusenLagos når den trykkes -->
     <button type="button" onclick="tusenLagos()">Print Navnet</button>
+    <!-- Div hvor resultatet skal vises -->
     <div class="printNavnetMitt"></div>
     <script>
+      // Funksjon som skriver ut navnet 1000 ganger
       function tusenLagos() {
+        // Henter verdien fra tekstfeltet
         const userInput = document.getElementById('userInput').value;
+        // Henter div-elementet der navnet skal skrives ut
         const div = document.querySelector('.printNavnetMitt');
+        // Lager en tom streng for å samle opp navnet 1000 ganger
         let content = '';
+        // Gjentar 1000 ganger
         for (let i = 0; i < 1000; i++) {
+          // Legger til navnet og et mellomrom for hver gang
           content += userInput + ' ';
         };
+        // Setter innholdet i div-en til den ferdige strengen
         div.innerHTML = content;
       };
     </script>
@@ -52,15 +69,18 @@
   <!-- Oppg. 3 -->
   <section>
     <h2>Oppgave 3</h2>
+    <!-- Div hvor resultatet skal vises -->
     <div class="matteTing"></div>
     <script>
+      // Henter div-elementet der resultatet skal vises
       const result = document.querySelector('.matteTing');
+      // Setter inn HTML med utregninger av modulus-operatoren
       result.innerHTML = `
-        15 % 2 = ${15 % 2} </br>
-        15 % 3 = ${15 % 3} </br>
-        10 % 3 = ${10 % 3} </br>
-        12 % 3 = ${12 % 3} </br>
-        16 % 2 = ${16 % 2}
+        15 % 2 = ${15 % 2} </br> <!-- 15 delt på 2, resten er 1 -->
+        15 % 3 = ${15 % 3} </br> <!-- 15 delt på 3, resten er 0 -->
+        10 % 3 = ${10 % 3} </br> <!-- 10 delt på 3, resten er 1 -->
+        12 % 3 = ${12 % 3} </br> <!-- 12 delt på 3, resten er 0 -->
+        16 % 2 = ${16 % 2}      <!-- 16 delt på 2, resten er 0 -->
       `;
     </script>
   </section>
@@ -69,14 +89,20 @@
   <section>
     <h2>Oppgave 4</h2>
     <script>
+      // Spør brukeren om alder og lagrer svaret i variabelen 'gammelNok'
       const gammelNok = prompt("Hvor gammel er du?");
+      // Funksjon som sjekker om brukeren er gammel nok (18 år eller mer)
       function sjekkAlder(gammelNok) {
+        // Hvis alder er 18 eller mer
         if (gammelNok >= 18) {
+          // Vis en alert med "Du er gammel nok"
           alert("Du er gammel nok");
         } else {
+          // Ellers vis en alert med "Du er ikke gammel nok"
           alert("Du er ikke gammel nok");
         }
       };
+      // Kaller funksjonen med brukerens alder
       sjekkAlder(gammelNok);
     </script>
   </section>
@@ -84,9 +110,12 @@
   <!-- Oppg. 5 -->
   <section>
     <h2>Oppgave 5</h2>
+    <!-- Div hvor resultatet skal vises -->
     <div id="resultat5"></div>
     <script>
+      // Lager en funksjon som regner ut summen av alle tall fra 1 til n
       const sum100 = (n) => (n * (n + 1)) / 2;
+      // Skriver ut summen av tallene fra 1 til 100 i div-en
       document.getElementById('resultat5').innerText = sum100(100);
     </script>
   </section>
@@ -94,14 +123,21 @@
   <!-- Oppg. 6 -->
   <section>
     <h2>Oppgave 6</h2>
+    <!-- Div hvor resultatet skal vises -->
     <div id="result6"></div>
     <script>
+      // Lager en variabel for å holde på summen
       let sum6 = 0;
+      // Lager en streng for å vise alle oddetallene
       let numbers6 = '';
+      // Går gjennom alle oddetall fra 1 til 99
       for (let i = 1; i < 100; i += 2) {
+        // Legger til tallet i summen
         sum6 += i;
+        // Legger til tallet i strengen
         numbers6 += i + ' ';
       }
+      // Skriver ut tallene og summen i div-en
       document.getElementById('result6').innerHTML =
         'Tallene er: ' + numbers6 + '<br>Summen er: ' + sum6;
     </script>
@@ -110,14 +146,20 @@
   <!-- Oppg. 7-->
   <section>
     <h2>Oppgave 7 – Tall delelig med 3</h2>
+    <!-- Div hvor resultatet skal vises -->
     <div id="result7"></div>
     <script>
+      // Lager en variabel for å holde på summen
       let sum7 = 0;
+      // Går gjennom alle tall fra 0 til 100
       for (let i = 0; i <= 100; i++) {
+        // Sjekker om tallet er delelig med 3
         if (i % 3 === 0) {
+          // Legger til tallet i summen hvis det er delelig med 3
           sum7 += i;
         }
       }
+      // Skriver ut summen i div-en
       document.getElementById('result7').innerText = "Sum = " + sum7;
     </script>
   </section>
@@ -126,10 +168,15 @@
   <section>
     <h2>Oppgave 8 – Sum av tall</h2>
     <script>
+      // Spør brukeren om et tall mindre enn 10 000
       let brukerTall = prompt("Tast inn et tall som er mindre enn 10 000:");
+      // Lager en variabel for å holde på summen
       let summen1 = 0;
+      // Går gjennom alle tall fra 0 til brukerens tall
       for (let i = 0; i <= brukerTall; i++)
+        // Legger til tallet i summen
         summen1 = summen1 + i;
+      // Skriver ut summen på nettsiden
       document.write(`Summen av alle tall mellom 0 og ${brukerTall} er: ` + summen1);
     </script>
   </section>
@@ -138,22 +185,32 @@
   <section>
     <h2>Oppgave 9 – Quiz</h2>
     <script>
+      // Lager en variabel for poengsummen
       let poeng=0
+      // Spør brukeren om navnet på hovedkarakteren i Dune
       let svar1 = prompt("Hva heter hovedkarakteren i filmen Dune?");
+      // Sjekker om svaret er riktig (flere mulige riktige svar)
       if( svar1==="Paul Atreides" || svar1==="Paul" || svar1==="Atreides") {
+          // Hvis riktig, skriv ut melding og gi 2 poeng
           document.write("Helt riktig, du får 2 poeng <br>");
           poeng = poeng + 2
       }
       else
+          // Hvis feil, skriv ut feilmelding
           document.write("Feil svar <br>")
 
+      // Spør brukeren om navnet på kjæresten til Paul
       let svar2= prompt("Hva heter kjæresten til Paul?");
+      // Sjekker om svaret er riktig
       if( svar2==="Chani") {
+          // Hvis riktig, skriv ut melding og gi 2 poeng
           document.write("Helt riktig, du får 2 poeng <br>");
           poeng = poeng + 2
       }
       else
+          // Hvis feil, skriv ut feilmelding
           document.write("Feil svar")
+      // Skriver ut total poengsum
       document.write("<br>Du fikk totalt: " + poeng);
     </script>
   </section>
@@ -162,6 +219,7 @@
   <section>
     <h2>Oppgave 10 – Tabell</h2>
     <script>
+      // Skriver ut starten på en HTML-tabell
       document.write( `
       <table>
         <thead>
@@ -173,7 +231,9 @@
         </thead>
         <tbody>
       ` );
+      // Går gjennom tallene fra 1 til 100
       for (let i = 1; i <= 100; i++) {
+        // Skriver ut en rad med tallet, kvadratet og kubikken
         document.write( `
           <tr>
             <td>${i}</td>
@@ -182,6 +242,7 @@
           </tr>
         ` );
       }
+      // Skriver ut slutten på tabellen
       document.write( `
         </tbody>
       </table>` );
@@ -192,16 +253,22 @@
   <section>
     <h2>Oppgave 11 – FizzBuzz</h2>
     <script>
+      // Går gjennom tallene fra 1 til 100
       for (let i = 1; i <= 100; i++) {
+        // Sjekker om tallet er delelig med både 3 og 5
         if (i % 3 === 0 && i % 5 === 0) {
           document.write('FizzBuzz');
         } else if (i % 3 === 0) {
+          // Sjekker om tallet er delelig med 3
           document.write('Fizz');
         } else if (i % 5 === 0) {
+          // Sjekker om tallet er delelig med 5
           document.write('Buzz');
         } else {
+          // Hvis ikke, skriv ut tallet
           document.write(i);
         }
+        // Legger til linjeskift etter hvert tall/ord
         document.write('<br>');
       }
     </script>

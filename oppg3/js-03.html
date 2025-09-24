@@ -1,22 +1,29 @@
-<!DOCTYPE html>
-<html lang="no">
+<!DOCTYPE html> <!-- Forteller nettleseren at dette er et HTML5-dokument -->
+<html lang="no"> <!-- Setter språket på nettsiden til norsk -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>oppg. 3</title>
+    <meta charset="UTF-8"> <!-- Angir tegnsettet til UTF-8 for å støtte norske tegn -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Gjør siden responsiv på mobil -->
+    <title>oppg. 3</title> <!-- Tittelen som vises i nettleserfanen -->
 </head>
 <body>
 <!--Oppg.1-->
     <section>
-        <h1>Oppg. 1</h1>
+        <h1>Oppg. 1</h1> <!-- Overskrift for oppgave 1 -->
         <p>Lag en webside med en knapp. Teksten i knappen skal være "Vis mitt navn". Når man trykker på knappen, skal det dukke opp en melding som viser ditt navn.</p>
+        <!-- Knapp som viser en alert med navnet "Siri!" når man klikker -->
         <button onclick="alert('Siri!')">MITT NAVN</button>
     </section>
 
 <!--Oppg. 2-->
     <section>
-        <h1>Oppg. 2</h1>
+        <h1>Oppg. 2</h1> <!-- Overskrift for oppgave 2 -->
         <p>Lag en webside med en overskrift. Når man tar musen over overskriften skal den endre farge. Når man trykker på overskriften skal det vises en melding.</p>
+        <!-- 
+            h2-elementet har tre hendelser:
+            - onmouseenter: Når musen går over overskriften, endres fargen til rød
+            - onmouseleave: Når musen forlater overskriften, endres fargen til blå
+            - onclick: Når man klikker på overskriften, vises en alert med "BØØ"
+        -->
         <h2
             onmouseenter="this.style.color = 'red'"
             onmouseleave="this.style.color = 'blue'"
@@ -26,8 +33,13 @@
 
 <!--Oppg. 3-->
     <section>
-        <h1>Oppg. 3</h1>
+        <h1>Oppg. 3</h1> <!-- Overskrift for oppgave 3 -->
         <p>Lag en webside med 5 knapper. Alle knappene skal ha det samme innholdet, "Klikk meg". Velg ut en tilfeldig knapp – denne skal vise "Riktig!"</p>
+        <!-- 
+            Fem knapper:
+            - Fire av dem viser "Feil!" når man klikker
+            - Én av dem (tilfeldig valgt) viser "Rektig!"
+        -->
         <button onclick="alert('Feil!')">KLIKK MEG</button>
         <button onclick="alert('Rektig!')">KLIKK MEG</button>
         <button onclick="alert('Feil!')">KLIKK MEG</button>
@@ -38,9 +50,10 @@
 <!--Oppg. 4-->
 
     <section>
-        <h1>Oppgave 4</h1>
-        <p>Kor lang er ein ny født Panda?</p>
+        <h1>Oppgave 4</h1> <!-- Overskrift for oppgave 4 -->
+        <p>Kor lang er ein ny født Panda?</p> <!-- Spørsmålstekst -->
             <ol>
+                <!-- Hver listepunkt har en knapp som gir tilbakemelding om svaret er riktig eller feil -->
                 <li><button onclick="alert('Feil')">20 cm</button></li>
                 <li><button onclick="alert('Feil!')">35cm</button></li>
                 <li><button onclick="alert('Riktig')">15 cm</button></li>
@@ -51,10 +64,11 @@
 <!--Oppg. 5-->
 
   <section>
-    <h1>Oppgave 5</h1>
+    <h1>Oppgave 5</h1> <!-- Overskrift for oppgave 5 -->
     <p>Quiz-variant uten knapper:</p>
     <p>Er pandaer feite?</p>
         <ul>
+            <!-- Hvert listepunkt har en onclick som gir tilbakemelding om svaret er riktig eller feil -->
             <li onclick="alert('Feil')">NEI</li>
             <li onclick="alert('Feil!')">JA</li>
             <li onclick="alert('Riktig')">NEI, dei har muskler</li>
@@ -64,8 +78,13 @@
 
 <!--Oppg. 6-->
     <section>
-        <h1>Oppgave 6</h1>
-        <p>Hei, prøver å lage en lang <span onclick="alert('riktig')">setning</span> der et av ordene er riktig.</p>
+        <h1>Oppgave 6</h1> <!-- Overskrift for oppgave 6 -->
+        <p>
+            Hei, prøver å lage en lang 
+            <!-- Ordet "setning" er gjort klikkbart og gir alert med "riktig" -->
+            <span onclick="alert('riktig')">setning</span> 
+            der et av ordene er riktig.
+        </p>
         <p>Hei, korleis går det med deg da?</p>
     </section>
 

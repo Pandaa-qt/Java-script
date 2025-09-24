@@ -1,97 +1,102 @@
-<!DOCTYPE html>
-<html lang="no">
+<!DOCTYPE html> <!-- Forteller nettleseren at dette er et HTML5-dokument -->
+<html lang="no"> <!-- Starter HTML-dokumentet og setter språket til norsk -->
 <head>
-  <meta charset="UTF-8">
-  <title>Oppg. 1</title>
+  <meta charset="UTF-8"> <!-- Setter tegnsettet til UTF-8 for å støtte norske tegn -->
+  <title>Oppg. 1</title> <!-- Tittelen som vises i nettleserfanen -->
 </head>
 <body>
-  <h1>Oppg. 1</h1>
+  <h1>Oppg. 1</h1> <!-- Hovedoverskrift på siden -->
 
   <!-- Oppg. 1 -->
-  <h2>1. Alert med teksten "Utvikling"</h2>
-  <button onclick="alert('Utvikling')">Vis alert</button>
+  <h2>1. Alert med teksten "Utvikling"</h2> <!-- Oppgave 1-overskrift -->
+  <button onclick="alert('Utvikling')">Vis alert</button> <!-- Knapp som viser en popup med teksten "Utvikling" når du klikker -->
 
   <!-- Oppg. 2 -->
-  <h2>2. Vis navnet ditt med JavaScript</h2>
-  <button onclick="alert('Hallo, Siri')">Vis navnet mitt</button>
+  <h2>2. Vis navnet ditt med JavaScript</h2> <!-- Oppgave 2-overskrift -->
+  <button onclick="alert('Hallo, Siri')">Vis navnet mitt</button> <!-- Knapp som viser en popup med teksten "Hallo, Siri" -->
+
   <!-- Oppg. 3 -->
-  <h2>3. Finn høyden og bredden på fanen</h2>
+  <h2>3. Finn høyden og bredden på fanen</h2> <!-- Oppgave 3-overskrift -->
   <button onclick="alert('Vidden er: ' + window.innerWidth + ' og høyden er: ' + window.innerHeight)">
     Se størrelse
   </button>
+  <!-- Knapp som viser en popup med bredden og høyden på nettleservinduet -->
 
   <!-- Oppg. 4 -->
-  <h2>4. Variabel med navnet ditt</h2>
+  <h2>4. Variabel med navnet ditt</h2> <!-- Oppgave 4-overskrift -->
   <script>
-    let navn = "Siri";
-    document.write("<p>Wow nice name, " + navn + "</p>");
+    let navn = "Siri"; // Lager en variabel som heter navn og gir den verdien "Siri"
+    document.write("<p>Wow nice name, " + navn + "</p>"); // Skriver ut en tekst på nettsiden med navnet
   </script>
   
   <!-- Oppg. 5 -->
-  <h2>5. Innskrivingsfelt</h2>
-  <input type="text" id="brukerInput" placeholder="Skriv noe her">
-  <button onclick="visSvar()">Send</button>
-  <p id="resultat"></p>
+  <h2>5. Innskrivingsfelt</h2> <!-- Oppgave 5-overskrift -->
+  <input type="text" id="brukerInput" placeholder="Skriv noe her"> <!-- Tekstfelt der brukeren kan skrive inn noe -->
+  <button onclick="visSvar()">Send</button> <!-- Knapp som kjører funksjonen visSvar når du klikker -->
+  <p id="resultat"></p> <!-- Avsnitt der svaret vises -->
   <script>
-    function visSvar() {
-      let svar = document.getElementById("brukerInput").value;
-      document.getElementById("resultat").innerText = "Du skrev: " + svar;
+    function visSvar() { // Lager en funksjon som heter visSvar
+      let svar = document.getElementById("brukerInput").value; // Henter det brukeren har skrevet i tekstfeltet
+      document.getElementById("resultat").innerText = "Du skrev: " + svar; // Viser teksten "Du skrev: ..." under knappen
     }
   </script>
 
   <!-- Oppg. 6 -->
-  <h2>6. Hva betyr string?</h2>
-  <p><strong>String</strong> betyr tekst i programmering, f.eks. "Hei" eller "123".</p>
+  <h2>6. Hva betyr string?</h2> <!-- Oppgave 6-overskrift -->
+  <p><strong>String</strong> betyr tekst i programmering, f.eks. "Hei" eller "123".</p> <!-- Forklaring på hva en string er -->
 
   <!-- Oppg. 7 -->
-  <h2>7. Overskrive body</h2>
+  <h2>7. Overskrive body</h2> <!-- Oppgave 7-overskrift -->
   <button onclick="document.body.innerHTML='JavaScript funket siden du ser dette.'">
     Overskriv innhold
   </button>
+  <!-- Knapp som sletter alt innholdet på siden og viser kun teksten "JavaScript funket siden du ser dette." -->
 
   <!-- Oppg. 8 -->
-  <h2>8. Endre tekst med getElementById</h2>
-  <p id="minId">Dette er gammel tekst</p>
+  <h2>8. Endre tekst med getElementById</h2> <!-- Oppgave 8-overskrift -->
+  <p id="minId">Dette er gammel tekst</p> <!-- Avsnitt med en id som kan endres med JavaScript -->
   <button onclick="document.getElementById('minId').innerText='Vi fikk endret teksten med JavaScript'">
     Endre tekst
   </button>
+  <!-- Knapp som endrer teksten i avsnittet over når du klikker -->
 
   <!-- Oppg. 9 -->
-  <h2>9. Bytte bilde med getElementById</h2>
-  <img id="bilde" src="bilde1.jpg" width="200">
+  <h2>9. Bytte bilde med getElementById</h2> <!-- Oppgave 9-overskrift -->
+  <img id="bilde" src="bilde1.jpg" width="200"> <!-- Bilde med id "bilde" og bredde 200px -->
   <button onclick="document.getElementById('bilde').src='bilde2.jpg'">Bytt bilde</button>
+  <!-- Knapp som bytter bildet til "bilde2.jpg" når du klikker -->
 
   <!-- Oppg. 10 -->
-  <h2>10. Challenge – Mynt eller kron (automatisk ved lasting)</h2>
-  <img id="imgKron" width="200">
+  <h2>10. Challenge – Mynt eller kron (automatisk ved lasting)</h2> <!-- Oppgave 10-overskrift -->
+  <img id="imgKron" width="200"> <!-- Bilde som skal vise mynt eller kron -->
   <script>
-    let imgKron=document.getElementById("imgKron");
-    var tilfeldigTall=Math.random();
-    if(tilfeldigTall<0.5){
-      imgKron.src="kron.jpg";
+    let imgKron=document.getElementById("imgKron"); // Henter bilde-elementet med id "imgKron"
+    var tilfeldigTall=Math.random(); // Lager et tilfeldig tall mellom 0 og 1
+    if(tilfeldigTall<0.5){ // Hvis tallet er mindre enn 0.5
+      imgKron.src="kron.jpg"; // Vis bildet "kron.jpg"
     } else {
-      imgKron.src="mynt.jpg";
+      imgKron.src="mynt.jpg"; // Ellers vis bildet "mynt.jpg"
     }
   </script>
 
   <!-- Oppg. 11 -->
-  <h2>11. Mynt eller kron med knapp</h2>
+  <h2>11. Mynt eller kron med knapp</h2> <!-- Oppgave 11-overskrift -->
   <img
     alt="Mynt eller kron?"
     id="kastBilde"
-src=" SKRIV IN URL "
+    src="https://media.snl.no/media/23520/standard_IMG_8567.jpg"
     width="200">
   <br>
-  <button onclick="kastMynt()">Kast!</button>
+  <button onclick="kastMynt()">Kast!</button> <!-- Knapp som kjører funksjonen kastMynt når du klikker -->
 
   <script>
-    function kastMynt () {
-      const bildeelementet = document.getElementById("kastBilde")
-      const tall = Math.random()
-      if (tall < 0.5)
-        bildeelementet.src = "kron.jpg"
+    function kastMynt () { // Lager en funksjon som heter kastMynt
+      const bildeelementet = document.getElementById("kastBilde") // Henter bilde-elementet med id "kastBilde"
+      const tall = Math.random() // Lager et tilfeldig tall mellom 0 og 1
+      if (tall < 0.5) // Hvis tallet er mindre enn 0.5
+        bildeelementet.src = "kron.jpg" // Bytt bildet til "kron.jpg"
       else
-        bildeelementet.src = "mynt.jpg"
+        bildeelementet.src = "mynt.jpg" // Ellers bytt bildet til "mynt.jpg"
     }
   </script>
 

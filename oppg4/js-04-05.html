@@ -1,37 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oppgave 5</title>
 </head>
 <body>
-        <!--oppgave 5-->
+    <!-- Oppgave 5 -->
     <h1>Oppgave 5</h1>
     <script>
+        // Funksjon som returnerer kvadratet av tallet (i * i)
         function square(i)  {
-            return i + i
-        }
-        function third(i)   {
-            return i * i * i
+            // Returnerer i multiplisert med seg selv
+            return i * i;
         }
 
+        // Funksjon som returnerer kuben av tallet (i * i * i)
+        function third(i)   {
+            // Returnerer i multiplisert med seg selv to ganger til (i^3)
+            return i * i * i;
+        }
+
+        // Funksjon som lager en rad i tabellen for tallet i
         function getRow(i)  {
-            let s = '<tr>'
-                s += '<td>' + i + '</td>'
-                s += '<td>' + square(i) + '</td>'
-                s += '<td>' + third(i) + '</td>'
-                s += '</tr>'
-                return s
+            // Starter en streng med en ny tabellrad
+            let s = '<tr>';
+            // Legger til en celle med tallet i
+            s += '<td>' + i + '</td>';
+            // Legger til en celle med kvadratet av i
+            s += '<td>' + square(i) + '</td>';
+            // Legger til en celle med kuben av i
+            s += '<td>' + third(i) + '</td>';
+            // Avslutter tabellraden
+            s += '</tr>';
+            // Returnerer hele raden som en HTML-streng
+            return s;
         }
+
+        // Funksjon som lager hele tabellen
         function getTable(){
-            let s = '<table>'
-                return s
+            // Starter en streng med tabell-tag og en overskriftsrad
+            let s = '<table border="1">';
+            s += '<tr><th>Tall</th><th>Kvadrat</th><th>Kube</th></tr>';
+            // Går gjennom tallene 1 til 10 og legger til en rad for hvert tall
+            for(let i = 1; i <= 10; i++) {
+                s += getRow(i);
+            }
+            // Avslutter tabellen
+            s += '</table>';
+            // Returnerer hele tabellen som en HTML-streng
+            return s;
         }
+
+        // Funksjon som skriver ut tabellen på nettsiden
         function writeTable() {
-            document.write( getTable() )
+            // Skriver ut tabellen ved å bruke document.write og getTable-funksjonen
+            document.write( getTable() );
         }
     </script>
+    <!-- Knapp som kjører writeTable-funksjonen når man trykker -->
     <button onclick="writeTable()">Start!</button>  
 </body>
 </html>
